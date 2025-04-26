@@ -1,11 +1,14 @@
 import java.util.*;
-class Handshakes{
-	public static void main(String[] args){
-		int num,t=0;
-		Scanner obj=new Scanner(System.in);
-		System.out.print("Enter the number of persons::");
-		num=obj.nextInt();
-		t=(num*(num-1))/2;
-		System.out.println(t);
-	}
+class  Handshakes{
+    public static int shake(int n){
+	    int t= (n*(n-1))/2;
+		return t;
+		}
+	public static void main(String args[]){
+	   Scanner sc=new Scanner(System.in);
+	   System.out.print("Enter the number of Students::");
+	   int n=sc.nextInt();
+	   int t=shake(n);
+	   System.out.print("The Total number of Handshakes is "+t);
+	   }
 }

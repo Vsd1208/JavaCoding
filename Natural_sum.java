@@ -1,16 +1,18 @@
 import java.util.*;
 class Natural_sum{
+	public static int sum_n(int num){
+		int sum=0;
+		sum+=num;
+		if (num==0)
+		  return 0;			
+		return num+sum_n(num-1);
+	}
 	public static void main(String[] args){
-		int n,sum=0;
-		Scanner obj=new Scanner(System.in);
-		System.out.print("Enter the number::");
-		n=obj.nextInt();
-		if(n>0){
-			for(int i=1;i<=n;i++)
-				sum+=i;
-			System.out.println("The sum of "+n+" natural numbers is "+sum);
-		}
-		else
-			System.out.println("Not a Natural Number");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the angle::");
+		int num=sc.nextInt();
+		int s=sum_n(num);
+		double sum=(num*(num+1))/2;
+        System.out.println(sum+" "+s); 		
 	}
 }

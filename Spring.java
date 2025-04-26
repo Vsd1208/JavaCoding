@@ -1,14 +1,18 @@
 import java.util.*;
-class Spring{
+class Spring {
+    public static boolean season(int m){
+	  boolean k=false;
+	  if(m>=3 && m<=6) k=true;
+	  return k;
+	}
 	public static void main(String[] args){
-		int month,day;
-		Scanner obj=new Scanner(System.in);
-		System.out.print("Enter your month and day::");
-		month=obj.nextInt();
-		day=obj.nextInt();
-		if(month>=3 && month<=6)
-			System.out.println("Spring");
-		else 
-			System.out.println("Not Spring");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the month::");
+		int m=sc.nextInt();
+		boolean t=season(m);
+		if (t==true)
+			System.out.println("Its a Spring Season");
+		else
+			System.out.println("Not a Spring Season");
 	}
 }
